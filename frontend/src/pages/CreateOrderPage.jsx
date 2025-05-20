@@ -106,7 +106,7 @@ const CreateOrderPage = () => {
         precio: productToAdd.precio
       }]);
     }
-
+ºººººººººººººº
     // Limpiar el input
     setProductQuantities({
       ...productQuantities,

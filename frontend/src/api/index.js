@@ -135,7 +135,7 @@ export const registerPayment = async (paymentData) => {
   });
 };
 
-// --- Endpoint para Autenticación (Login) ---
+// --- Endpoint para Login---
 /**
  * @param {object} credentials
  * @param {string} credentials.usuario

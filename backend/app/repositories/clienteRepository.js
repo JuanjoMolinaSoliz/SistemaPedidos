@@ -1,3 +1,4 @@
+// 1
 const Cliente = require('../models/Cliente');
 class ClienteRepository{
     constructor(db) {
@@ -11,7 +12,7 @@ class ClienteRepository{
         return result[0].insertId;
     }
 
-        async getAll() {
+    async getAll() {
         try {
             const [rows] = await this.db.query('SELECT * FROM Cliente');
             return rows.map(row => new Cliente(row.idCliente, row.nombre, row.ci));
