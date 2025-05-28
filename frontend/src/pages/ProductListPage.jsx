@@ -156,6 +156,7 @@ const ProductListPage = () => {
               <button
                 className="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-md focus:outline-none focus:shadow-outline disabled:opacity-50 disabled:cursor-not-allowed transition duration-150 ease-in-out"
                 type="submit"
+                id = "enviar"
                 disabled={isCreatingProduct}
               >
                 {isCreatingProduct ? 'Creando...' : 'Crear Producto'}

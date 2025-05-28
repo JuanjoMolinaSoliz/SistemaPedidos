@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-// --- ¡IMPORTA useAuth! ---
 import { useAuth } from '../context/AuthContext';
 
 
@@ -17,11 +16,11 @@ const LoginPage = () => {
   const navigate = useNavigate();
   const { login, isAuthenticated } = useAuth();
 
-   useEffect(() => {
-     if (isAuthenticated) {
-       navigate('/productos');
-     }
-   }, [isAuthenticated, navigate]);
+  useEffect(() => {
+    if (isAuthenticated) {
+      navigate('/productos');
+    }
+  }, [isAuthenticated, navigate]);
 
 
   const handleSubmit = async (e) => {
@@ -43,9 +42,15 @@ const LoginPage = () => {
     }
   };
 
-   if (isAuthenticated) {
-     return null;
-   }
+  // Función para el enlace de recuperar contraseña
+  const handleForgotPasswordClick = () => {
+    console.log('Clic en "Recuperar contraseña". ¡Funcionalidad de redirección/formulario aún no implementada!');
+    // Aquí podrías añadir un navigate('/recuperar-contrasena') si tuvieras esa ruta.
+  };
+
+  if (isAuthenticated) {
+    return null;
+  }
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
@@ -94,8 +99,22 @@ const LoginPage = () => {
             </div>
           )}
 
+          <div className="flex items-center justify-between">
+            {/* Nuevo div para el enlace de Recuperar Contraseña */}
+            <div className="text-sm">
+              <a
+                href="#" // Se puede cambiar a un navigate('/recuperar-contrasena') cuando la ruta exista
+                onClick={handleForgotPasswordClick}
+                className="font-medium text-blue-600 hover:text-blue-500"
+              >
+                ¿Olvidaste tu contraseña?
+              </a>
+            </div>
+          </div>
+
           <div>
             <button
+              id='loger'
               type="submit"
               className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed transition duration-150 ease-in-out"
               disabled={loading}

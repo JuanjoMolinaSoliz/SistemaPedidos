@@ -1,0 +1,502 @@
+[
+    {
+        "nombre":"Honey Garlic Shrimp",
+        "precio":8.49,
+        "stock":61
+    },
+    {
+        "nombre":"Hummus",
+        "precio":4.29,
+        "stock":76
+    },
+    {
+        "nombre":"Athletic Compression Tights",
+        "precio":39.99,
+        "stock":99
+    },
+    {
+        "nombre":"Beard Grooming Kit",
+        "precio":34.99,
+        "stock":32
+    },
+    {
+        "nombre":"Classic Chicken Noodle Soup",
+        "precio":3.49,
+        "stock":28
+    },
+    {
+        "nombre":"Watercolor Brush Pens",
+        "precio":19.99,
+        "stock":73
+    },
+    {
+        "nombre":"Vintage Button-Down Shirt",
+        "precio":45.99,
+        "stock":87
+    },
+    {
+        "nombre":"Waffle Maker",
+        "precio":39.99,
+        "stock":83
+    },
+    {
+        "nombre":"Beef Tacos",
+        "precio":5.49,
+        "stock":91
+    },
+    {
+        "nombre":"Herb Garlic Butter",
+        "precio":3.99,
+        "stock":36
+    },
+    {
+        "nombre":"Toilet Paper (12 rolls)",
+        "precio":8.99,
+        "stock":75
+    },
+    {
+        "nombre":"Juice Extractor",
+        "precio":99.99,
+        "stock":62
+    },
+    {
+        "nombre":"Travel Yoga Mat",
+        "precio":34.99,
+        "stock":88
+    },
+    {
+        "nombre":"Electric Food Steamer",
+        "precio":59.99,
+        "stock":67
+    },
+    {
+        "nombre":"Honey Mustard Dip",
+        "precio":3.29,
+        "stock":52
+    },
+    {
+        "nombre":"Gaming Headset",
+        "precio":69.99,
+        "stock":62
+    },
+    {
+        "nombre":"Organic Honeycrisp Apples",
+        "precio":1.99,
+        "stock":56
+    },
+    {
+        "nombre":"Summer Tank Dress",
+        "precio":39.99,
+        "stock":59
+    },
+    {
+        "nombre":"Kids' Dinosaur-Themed Lunchbox",
+        "precio":19.99,
+        "stock":59
+    },
+    {
+        "nombre":"Frozen Acai Pur\u00e9e",
+        "precio":6.99,
+        "stock":72
+    },
+    {
+        "nombre":"Chocolate Chip Pancake Mix",
+        "precio":3.99,
+        "stock":59
+    },
+    {
+        "nombre":"Stainless Steel Travel Mug",
+        "precio":19.99,
+        "stock":80
+    },
+    {
+        "nombre":"Peanut Butter Chocolate Clusters",
+        "precio":2.99,
+        "stock":65
+    },
+    {
+        "nombre":"Non-Slip Yoga Socks",
+        "precio":12.99,
+        "stock":55
+    },
+    {
+        "nombre":"Pork Chops",
+        "precio":9.49,
+        "stock":96
+    },
+    {
+        "nombre":"Nutty Trail Mix",
+        "precio":4.29,
+        "stock":47
+    },
+    {
+        "nombre":"Stainless Steel Grater",
+        "precio":14.99,
+        "stock":27
+    },
+    {
+        "nombre":"Kids' Science Experiment Kit",
+        "precio":29.99,
+        "stock":68
+    },
+    {
+        "nombre":"Sweet Potatoes (organic)",
+        "precio":1.99,
+        "stock":29
+    },
+    {
+        "nombre":"Pet Hair Removal Roller",
+        "precio":10.99,
+        "stock":22
+    },
+    {
+        "nombre":"Robot Vacuum Cleaner",
+        "precio":299.99,
+        "stock":45
+    },
+    {
+        "nombre":"Mashed Sweet Potatoes",
+        "precio":3.99,
+        "stock":69
+    },
+    {
+        "nombre":"Cushion Covers",
+        "precio":35.0,
+        "stock":73
+    },
+    {
+        "nombre":"Chino Shorts",
+        "precio":34.99,
+        "stock":22
+    },
+    {
+        "nombre":"Smoked Paprika Chicken Thighs",
+        "precio":6.99,
+        "stock":91
+    },
+    {
+        "nombre":"Beef Stew Meat",
+        "precio":5.99,
+        "stock":99
+    },
+    {
+        "nombre":"Fruit & Nut Trail Mix",
+        "precio":4.99,
+        "stock":96
+    },
+    {
+        "nombre":"Electric Fondue Pot",
+        "precio":39.99,
+        "stock":60
+    },
+    {
+        "nombre":"Herb Seasoned Couscous",
+        "precio":2.49,
+        "stock":26
+    },
+    {
+        "nombre":"Elderberry Syrup Kit",
+        "precio":22.99,
+        "stock":49
+    },
+    {
+        "nombre":"Magic Color-Changing Mug",
+        "precio":14.99,
+        "stock":88
+    },
+    {
+        "nombre":"Portable Laptop Table",
+        "precio":39.99,
+        "stock":58
+    },
+    {
+        "nombre":"Himalayan Salt Grinder",
+        "precio":4.99,
+        "stock":99
+    },
+    {
+        "nombre":"Veggie Chips Variety Pack",
+        "precio":3.79,
+        "stock":79
+    },
+    {
+        "nombre":"Caramel Apple Chips",
+        "precio":3.49,
+        "stock":22
+    },
+    {
+        "nombre":"Lemon Garlic Marinade",
+        "precio":4.29,
+        "stock":32
+    },
+    {
+        "nombre":"Zucchini",
+        "precio":0.79,
+        "stock":23
+    },
+    {
+        "nombre":"Athletic Jogging Jacket",
+        "precio":49.99,
+        "stock":75
+    },
+    {
+        "nombre":"Ceramic Knife Set",
+        "precio":39.99,
+        "stock":96
+    },
+    {
+        "nombre":"Natural Soy Candles",
+        "precio":19.99,
+        "stock":62
+    },
+    {
+        "nombre":"Chic Jumpsuit",
+        "precio":89.99,
+        "stock":51
+    },
+    {
+        "nombre":"Frozen Fruit Medley",
+        "precio":5.99,
+        "stock":32
+    },
+    {
+        "nombre":"Honey-Balsamic Vinaigrette",
+        "precio":3.39,
+        "stock":49
+    },
+    {
+        "nombre":"Portable Speaker Stand",
+        "precio":39.99,
+        "stock":36
+    },
+    {
+        "nombre":"LED Flashing Pet Collar",
+        "precio":14.99,
+        "stock":88
+    },
+    {
+        "nombre":"Car Vacuum",
+        "precio":49.99,
+        "stock":40
+    },
+    {
+        "nombre":"Ceramic Knife Set",
+        "precio":39.99,
+        "stock":31
+    },
+    {
+        "nombre":"Dried Mango Slices",
+        "precio":3.49,
+        "stock":95
+    },
+    {
+        "nombre":"Stainless Steel Travel Mug",
+        "precio":19.99,
+        "stock":80
+    },
+    {
+        "nombre":"Recipe Book Stand",
+        "precio":22.99,
+        "stock":92
+    },
+    {
+        "nombre":"Miso Soup Mix",
+        "precio":3.29,
+        "stock":80
+    },
+    {
+        "nombre":"Vanilla Almond Granola",
+        "precio":4.29,
+        "stock":22
+    },
+    {
+        "nombre":"Mini Cordless Vacuum Cleaner",
+        "precio":45.99,
+        "stock":30
+    },
+    {
+        "nombre":"Kids' Art Easel",
+        "precio":58.99,
+        "stock":71
+    },
+    {
+        "nombre":"Portable Refrigerator Freezer",
+        "precio":299.99,
+        "stock":36
+    },
+    {
+        "nombre":"Organic Black Bean Burger",
+        "precio":4.49,
+        "stock":30
+    },
+    {
+        "nombre":"French Bread",
+        "precio":2.49,
+        "stock":87
+    },
+    {
+        "nombre":"Raspberry Vanilla Greek Yogurt",
+        "precio":3.49,
+        "stock":63
+    },
+    {
+        "nombre":"Microfiber Cleaning Cloths",
+        "precio":9.99,
+        "stock":71
+    },
+    {
+        "nombre":"Classic Pumps",
+        "precio":64.99,
+        "stock":49
+    },
+    {
+        "nombre":"Protein Bar Variety Pack",
+        "precio":12.99,
+        "stock":38
+    },
+    {
+        "nombre":"Portable Pet Stroller",
+        "precio":89.99,
+        "stock":86
+    },
+    {
+        "nombre":"Samsung Galaxy Smartwatch",
+        "precio":249.99,
+        "stock":95
+    },
+    {
+        "nombre":"Organic Black Rice",
+        "precio":3.59,
+        "stock":74
+    },
+    {
+        "nombre":"Electric Griddle with Lid",
+        "precio":49.99,
+        "stock":97
+    },
+    {
+        "nombre":"Telescope",
+        "precio":159.99,
+        "stock":96
+    },
+    {
+        "nombre":"Travel Shoe Bags Set",
+        "precio":15.99,
+        "stock":21
+    },
+    {
+        "nombre":"Multi-Cooker",
+        "precio":89.99,
+        "stock":56
+    },
+    {
+        "nombre":"Vegetable Fried Rice",
+        "precio":4.99,
+        "stock":65
+    },
+    {
+        "nombre":"Home Delivery Food Journal",
+        "precio":14.99,
+        "stock":80
+    },
+    {
+        "nombre":"Wireless Mouse",
+        "precio":25.99,
+        "stock":60
+    },
+    {
+        "nombre":"Pet Safety Harness",
+        "precio":24.99,
+        "stock":93
+    },
+    {
+        "nombre":"Spicy Avocado Salsa",
+        "precio":4.49,
+        "stock":74
+    },
+    {
+        "nombre":"Teriyaki Chicken Stir-Fry",
+        "precio":6.99,
+        "stock":28
+    },
+    {
+        "nombre":"DIY Lip Balm Kit",
+        "precio":22.99,
+        "stock":29
+    },
+    {
+        "nombre":"Silicone Baking Molds",
+        "precio":15.99,
+        "stock":94
+    },
+    {
+        "nombre":"Cinnamon Sugar Donuts",
+        "precio":4.99,
+        "stock":42
+    },
+    {
+        "nombre":"Smartphone Tripod with Bluetooth Remote",
+        "precio":29.99,
+        "stock":42
+    },
+    {
+        "nombre":"Black Bean & Corn Salad",
+        "precio":3.99,
+        "stock":83
+    },
+    {
+        "nombre":"Marinara Sauce",
+        "precio":3.49,
+        "stock":88
+    },
+    {
+        "nombre":"Telescope",
+        "precio":159.99,
+        "stock":83
+    },
+    {
+        "nombre":"Cranberry Juice",
+        "precio":3.69,
+        "stock":93
+    },
+    {
+        "nombre":"Frozen Hash Browns",
+        "precio":2.99,
+        "stock":97
+    },
+    {
+        "nombre":"Puzzle 3D Model Kit",
+        "precio":22.99,
+        "stock":97
+    },
+    {
+        "nombre":"Herbal Tea Set",
+        "precio":19.99,
+        "stock":73
+    },
+    {
+        "nombre":"Laundry Detergent",
+        "precio":12.99,
+        "stock":38
+    },
+    {
+        "nombre":"Sweet Potatoes (organic)",
+        "precio":1.99,
+        "stock":88
+    },
+    {
+        "nombre":"Cucumber",
+        "precio":0.99,
+        "stock":55
+    },
+    {
+        "nombre":"Crafting Kit",
+        "precio":29.99,
+        "stock":51
+    },
+    {
+        "nombre":"Pet Grooming Gloves",
+        "precio":9.99,
+        "stock":91
+    }
+]
