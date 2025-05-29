@@ -32,7 +32,7 @@ try {
 describe('Pruebas de la página de Agregar Producto con Login', function() {
     this.timeout(45000);
 
-    before(async function() {¡
+    before(async function() {
         driver = await new Builder().forBrowser('chrome').build();
         console.log("Iniciando sesión para las pruebas...");
         await driver.get(LOGIN_URL);
