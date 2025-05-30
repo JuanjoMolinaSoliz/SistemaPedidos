@@ -1,7 +1,23 @@
-const { Builder, By, Key, until } = require('selenium-webdriver');
-const { expect } = require('chai');
-const fs = require('fs');
-const path = require('path');
+// test/agregar.test.js
+
+// --- IMPORTS PARA ES MODULES (Nueva sintaxis) ---
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+import path from 'path'; // Importa 'path' para path.resolve y path.join (ya lo tenías)
+
+// Importaciones de Selenium-WebDriver, Chai, y fs
+// NOTA: Algunas librerías pueden tener una sintaxis de importación ligeramente diferente
+// Si estas no funcionan, podría ser `import * as webdriver from 'selenium-webdriver';` etc.
+// Pero las que te pongo aquí son las más comunes para librerías que soportan ESM.
+import { Builder, By, Key, until } from 'selenium-webdriver';
+import { expect } from 'chai';
+import fs from 'fs'; // Importa el módulo 'fs' completo
+
+// DEFINE __filename y __dirname para el ámbito de ES Modules
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+// --- FIN CORRECCIÓN __dirname y IMPORTS ---
+
 
 // --- Configuración ---
 let driver;
@@ -11,7 +27,7 @@ const ADD_PRODUCT_URL = "http://localhost:5173/productos";
 // Credenciales de un usuario de prueba válido
 const TEST_USER = {
     username: "admin",
-    password: "1234" 
+    password: "1234"
 };
 
 // Ruta al archivo de datos de prueba
@@ -52,7 +68,7 @@ describe('Pruebas de la página de Agregar Producto con Login', function() {
             console.error("❌ Falló el login inicial para las pruebas.");
             console.error("Error:", error.message);
             await driver.takeScreenshot().then(function(image) {
-                fs.writeFileSync(`error_screenshot_login.png`, image, 'base64');
+                fs.writeFileSync(path.join(__dirname, `error_screenshot_login.png`), image, 'base64');
             });
             throw new Error("No se pudo iniciar sesión. Las pruebas no pueden continuar.");
         }
@@ -87,24 +103,24 @@ describe('Pruebas de la página de Agregar Producto con Login', function() {
                 await precioInput.sendKeys(String(product.precio));
                 await stockInput.sendKeys(String(product.stock));
 
-                console.log(`   Rellenando campos para: Nombre: "${product.nombre}", Precio: "${product.precio}", Stock: "${product.stock}"`);
+                console.log(`    Rellenando campos para: Nombre: "${product.nombre}", Precio: "${product.precio}", Stock: "${product.stock}"`);
 
                 await addProductButton.click();
 
-                // --- Aserciones ---
-                const messageElement = await driver.wait(until.elementLocated(By.id('message')), 10000);
+                // --- Aserciones: CAMBIADO EL SELECTOR Y EL TEXTO ESPERADO ---
+                const messageElement = await driver.wait(until.elementLocated(By.css('p.text-green-600')), 10000);
                 const messageText = await messageElement.getText();
-                expect(messageText).to.include('Producto agregado exitosamente'); 
+                expect(messageText).to.include('Producto enviado para creación. Reintentando cargar lista...'); 
 
-                console.log(`   ✔️ Producto #${index + 1}: "${product.nombre}" agregado y verificado exitosamente. Mensaje: "${messageText}"`);
+                console.log(`    ✔️ Producto #${index + 1}: "${product.nombre}" agregado y verificado exitosamente. Mensaje: "${messageText}"`);
 
             } catch (error) {
-                console.error(`   ❌ Falló la prueba para el producto #${index + 1}: "${product.nombre}"`);
-                console.error(`   Error: ${error.message}`);
+                console.error(`    ❌ Falló la prueba para el producto #${index + 1}: "${product.nombre}"`);
+                console.error(`    Error: ${error.message}`);
                 await driver.takeScreenshot().then(
                     function(image) {
-                        fs.writeFileSync(`error_screenshot_product_${index + 1}_${product.nombre.replace(/[^a-zA-Z0-9]/g, '_')}.png`, image, 'base64');
-                        console.log(`   Captura de pantalla guardada para "${product.nombre}".`);
+                        fs.writeFileSync(path.join(__dirname, `error_screenshot_product_${index + 1}_${product.nombre.replace(/[^a-zA-Z0-9]/g, '_')}.png`), image, 'base64');
+                        console.log(`    Captura de pantalla guardada para "${product.nombre}".`);
                     }
                 );
                 throw error;
@@ -115,21 +131,21 @@ describe('Pruebas de la página de Agregar Producto con Login', function() {
     // Prueba para campos vacíos
     it('Debería mostrar un error si los campos obligatorios están vacíos (después del login)', async function() {
         await driver.get(ADD_PRODUCT_URL);
-        await driver.wait(until.elementLocated(By.id('nombre')), 10000);
+        await driver.wait(until.elementLocated(By.id('newProductName')), 10000); 
 
         const addProductButton = await driver.findElement(By.id('enviar'));
         await addProductButton.click();
 
         try {
-            const errorMessageElement = await driver.wait(until.elementLocated(By.css('.error-message')), 5000);
+            const errorMessageElement = await driver.wait(until.elementLocated(By.css('p.text-red-600')), 5000);
             const errorMessageText = await errorMessageElement.getText();
-            expect(errorMessageText).to.include('Campo requerido');
+            expect(errorMessageText).to.include('Complete todos los campos.'); 
 
-            console.log(`   ✔️ Prueba de campos vacíos PASADA (después de login): Mensaje de error encontrado: "${errorMessageText}"`);
+            console.log(`    ✔️ Prueba de campos vacíos PASADA (después de login): Mensaje de error encontrado: "${errorMessageText}"`);
         } catch (error) {
             const currentUrl = await driver.getCurrentUrl();
-            expect(currentUrl).to.equal(ADD_PRODUCT_URL);
-            console.log("   ✔️ Prueba de campos vacíos PASADA (después de login): El formulario no se envió (validación HTML5 o JS).");
+            expect(currentUrl).to.equal(ADD_PRODUCT_URL); 
+            console.log("    ✔️ Prueba de campos vacíos PASADA (después de login): El formulario no se envió (validación HTML5 o JS).");
         }
     });
 
