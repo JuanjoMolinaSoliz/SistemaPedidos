@@ -5,6 +5,8 @@ class PedidoController {
     async crearPedido(req, res){
         try {
             const {fecha, idCliente, detalles} = req.body;
+            console.log("el pedido se creo correctamente gracias!")
+            console.log(req.body)
             const result = await this.pedidoService.crearPedido(fecha, idCliente, detalles);
             res.status(201).json(result);
         } catch (error) {
