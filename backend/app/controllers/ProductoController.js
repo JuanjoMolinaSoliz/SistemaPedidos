@@ -21,7 +21,9 @@ class ProductoController {
             }
             await this.productoService.crearProducto(data);
             res.status(201).json({ message: 'Producto creado con éxito' });
+            console.log("crear producto correcto");
         }catch(error){
+            console.log("error al crear producto");
             res.status(500).json({error: error.message});
         }
     }
