@@ -1,22 +1,13 @@
-// test/agregar.test.js
-
-// --- IMPORTS PARA ES MODULES (Nueva sintaxis) ---
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
-import path from 'path'; // Importa 'path' para path.resolve y path.join (ya lo tenías)
+import path from 'path';
 
-// Importaciones de Selenium-WebDriver, Chai, y fs
-// NOTA: Algunas librerías pueden tener una sintaxis de importación ligeramente diferente
-// Si estas no funcionan, podría ser `import * as webdriver from 'selenium-webdriver';` etc.
-// Pero las que te pongo aquí son las más comunes para librerías que soportan ESM.
 import { Builder, By, Key, until } from 'selenium-webdriver';
 import { expect } from 'chai';
-import fs from 'fs'; // Importa el módulo 'fs' completo
+import fs from 'fs';
 
-// DEFINE __filename y __dirname para el ámbito de ES Modules
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
-// --- FIN CORRECCIÓN __dirname y IMPORTS ---
 
 
 // --- Configuración ---
@@ -24,17 +15,14 @@ let driver;
 const LOGIN_URL = "http://localhost:5173/login";
 const ADD_PRODUCT_URL = "http://localhost:5173/productos";
 
-// Credenciales de un usuario de prueba válido
 const TEST_USER = {
     username: "admin",
     password: "1234"
 };
 
-// Ruta al archivo de datos de prueba
 const testDataPath = path.resolve(__dirname, '../datos_modificados.json');
 let testData = [];
 
-// Cargar los datos de prueba sincrónicamente al inicio
 try {
     const rawData = fs.readFileSync(testDataPath, 'utf8');
     testData = JSON.parse(rawData);
@@ -44,7 +32,6 @@ try {
     process.exit(1);
 }
 
-// --- Suite de Pruebas ---
 describe('Pruebas de la página de Agregar Producto con Login', function() {
     this.timeout(45000);
 
