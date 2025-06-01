@@ -7,6 +7,7 @@ class UsuarioService {
     }
     //para crear un usuario
     async crearUsuario(usuario, password){
+        console.log("UsuarioService.crearUsuario", usuario, password);
         return await this.usuarioRepository.crearUsuario(usuario, password);
     }
 }
