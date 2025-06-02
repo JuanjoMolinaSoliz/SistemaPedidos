@@ -42,6 +42,21 @@ async agregarProducto(data){
       throw new Error('Error updating stock: ' + error.message);
     }
   }
+
+  async elminarProducto(idProducto) {
+    try {
+      const [result] = await this.db.query(
+        'DELETE FROM Producto WHERE idProducto = ?',
+        [idProducto]
+      );
+      return result.affectedRows > 0;
+    } catch (error) {
+      console.error('Error en ProductoRepository.elminarProducto:', error);
+      throw new Error('Error deleting product: ' + error.message);
+    }
+  }
 }
+
+
 
 module.exports = ProductoRepository;

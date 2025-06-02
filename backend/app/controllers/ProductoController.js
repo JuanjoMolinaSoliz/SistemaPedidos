@@ -21,9 +21,16 @@ class ProductoController {
             }
             await this.productoService.crearProducto(data);
             res.status(201).json({ message: 'Producto creado con éxito' });
-            console.log("crear producto correcto");
         }catch(error){
-            console.log("error al crear producto");
+            res.status(500).json({error: error.message});
+        }
+    }
+    async eliminarProducto(req, res){
+        try {
+            const {idProducto} = req.params;
+            await this.productoService.eliminarProducto(idProducto);
+            res.status(200).json({ message: 'Producto eliminado con éxito' });
+        } catch (error) {
             res.status(500).json({error: error.message});
         }
     }

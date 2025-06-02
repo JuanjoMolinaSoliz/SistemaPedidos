@@ -11,6 +11,9 @@ class ProductoService {
     async crearProducto(data){
         return await this.productoRepository.agregarProducto(data)
     }
+    async eliminarProducto(idProducto){
+        return await this.productoRepository.elminarProducto(idProducto)
+    }
 }
 
 module.exports = ProductoService;
