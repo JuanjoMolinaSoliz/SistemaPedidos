@@ -1,2 +1,3 @@
 cambios elvis cambios juanjose
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Canbio Favio, se implemento el modulo para registro de proveedores.
