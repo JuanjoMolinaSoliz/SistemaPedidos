@@ -204,7 +204,7 @@ describe('Flujo Completo del Sistema: Login, Crear Producto, Crear Cliente, Crea
         await driver.wait(until.elementLocated(By.id('pedidoIdFactura')), 10000);
 
         try {
-            await driver.findElement(By.id('pedidoIdFactura')).sendKeys(String(3));
+            await driver.findElement(By.id('pedidoIdFactura')).sendKeys(String(7));
             
             const generateInvoiceButton = await driver.findElement(By.xpath("//button[@type='submit' and contains(., 'Generar Factura')]"));
             await generateInvoiceButton.click();

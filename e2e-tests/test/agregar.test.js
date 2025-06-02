@@ -44,9 +44,13 @@ describe('Pruebas de la página de Agregar Producto con Login', function() {
             await driver.wait(until.elementLocated(By.id('usuario')), 10000);
 
             await driver.findElement(By.id('usuario')).sendKeys(TEST_USER.username);
+            await driver.sleep(1000);
+
             await driver.findElement(By.id('password')).sendKeys(TEST_USER.password);
+            await driver.sleep(1000);
 
             await driver.findElement(By.id('loger')).click();
+            await driver.sleep(2000);
 
             await driver.wait(until.urlContains('/productos'), 15000);
             console.log("👍 Login exitoso. URL actual:", await driver.getCurrentUrl());
@@ -73,6 +77,7 @@ describe('Pruebas de la página de Agregar Producto con Login', function() {
         it(`Debería agregar el producto #${index + 1}: "${product.nombre}" exitosamente`, async function() {
             await driver.get(ADD_PRODUCT_URL);
             await driver.wait(until.elementLocated(By.id('newProductName')), 10000);
+            await driver.sleep(1500); 
 
             try {
                 const nombreInput = await driver.findElement(By.id('newProductName'));
@@ -84,15 +89,20 @@ describe('Pruebas de la página de Agregar Producto con Login', function() {
                 await nombreInput.clear();
                 await precioInput.clear();
                 await stockInput.clear();
+                await driver.sleep(500);
 
                 // Rellenar campos
                 await nombreInput.sendKeys(product.nombre);
+                await driver.sleep(500);
                 await precioInput.sendKeys(String(product.precio));
+                await driver.sleep(500);
                 await stockInput.sendKeys(String(product.stock));
+                await driver.sleep(500);
 
                 console.log(`    Rellenando campos para: Nombre: "${product.nombre}", Precio: "${product.precio}", Stock: "${product.stock}"`);
 
                 await addProductButton.click();
+                await driver.sleep(2000);
 
                 // --- Aserciones: CAMBIADO EL SELECTOR Y EL TEXTO ESPERADO ---
                 const messageElement = await driver.wait(until.elementLocated(By.css('p.text-green-600')), 10000);
@@ -120,8 +130,12 @@ describe('Pruebas de la página de Agregar Producto con Login', function() {
         await driver.get(ADD_PRODUCT_URL);
         await driver.wait(until.elementLocated(By.id('newProductName')), 10000); 
 
+        await driver.sleep(1500);
+
         const addProductButton = await driver.findElement(By.id('enviar'));
         await addProductButton.click();
+
+        await driver.sleep(2000);
 
         try {
             const errorMessageElement = await driver.wait(until.elementLocated(By.css('p.text-red-600')), 5000);
