@@ -31,3 +31,6 @@ app.use('/api/auth', usuarioRoutes);
 app.listen(port, () => {
   console.log(`Servidor corriendo en http://localhost:${port}`);
 });
+app.listen(port, () => {
+  console.log(`Servidor corriendo en http://localhost:${port}`);
+});
