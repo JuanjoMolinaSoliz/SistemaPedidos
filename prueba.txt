@@ -2,4 +2,9 @@ cambios elvis cambios juanjose
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 Cambios Favio, se implemento el modulo para registro de proveedores.
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+<<<<<<< HEAD
 Cambios Ander, se aumento las funciones para eliminar de pedido.
+=======
+Cambios Ander, se aumento las funciones para eliminar de pedido.
+Cambios Victor Veizaga Mur
+>>>>>>> 20616228afd345c280354821f29abab3c28d3c7c
