@@ -3,3 +3,4 @@ cambios elvis cambios juanjose
 Cambios Favio, se implemento el modulo para registro de proveedores.
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 Cambios Ander, se aumento las funciones para eliminar de pedido.
+Cambios Victor Veizaga Mur
